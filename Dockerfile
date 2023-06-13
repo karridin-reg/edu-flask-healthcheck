@@ -9,4 +9,4 @@ RUN pip install -r requirements.txt --no-cache-dir
 COPY ./src /app
 WORKDIR /app
 
-CMD ["gunicorn"  , "-b", "0.0.0.0:8000", "main:app"]
+CMD ["gunicorn"  , "-b", "0.0.0.0:8000", "--log-level", "DEBUG", "main:app"]
